@@ -1,0 +1,83 @@
+<emyeuchilinh html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cho chị Linh</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: linear-gradient(to bottom right, #ffe4ec, #ffd1dc);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+
+    #message {
+      font-size: 26px;
+      margin: 20px 0;
+    }
+
+    button {
+      font-size: 20px;
+      padding: 12px 24px;
+      margin: 10px;
+      border: none;
+      border-radius: 12px;
+      background-color: #ff90b3;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #ff5c8a;
+    }
+
+    #result {
+      margin-top: 30px;
+      font-size: 24px;
+      color: #d63384;
+      font-weight: bold;
+      display: none;
+    }
+
+    .show {
+      display: block;
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div id="message">e yêu chị Linh, chị yêu e ko ạ?</div>
+  <div id="buttons">
+    <button onclick="chonCo()">Có</button>
+    <button onclick="chonKhong()">Không</button>
+  </div>
+  <div id="result"></div>
+
+  <script>
+    function chonCo() {
+      const result = document.getElementById("result");
+      result.innerText = "hả";
+      result.className = "show";
+      document.getElementById("buttons").style.display = "none";
+    }
+
+    function chonKhong() {
+      const result = document.getElementById("result");
+      result.innerText = "bruh chúc chị thi tốt ạ e yêu chị💗";
+      result.className = "show";
+      document.getElementById("buttons").style.display = "none";
+    }
+  </script>
+</body>
+</html>
